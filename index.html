@@ -20,26 +20,26 @@
     </nav>
 
     <!-- Home Page -->
-<div id="home" class="page active">
-    <div class="home-container">
-        <div class="photo-container">
-            <img src="me1.jpg" alt="Mokshith K Y Gowda" class="profile-photo">
-        </div>
-        <div class="home-content">
-            <h1 class="name-title">MOKSHITH K Y GOWDA</h1>
-            <div class="about-section">
-                <h2>About Me</h2>
-                <p>
-                    Hardworking and motivated college student with a strong willingness to learn and contribute in dynamic work
-                    environments. Highly adaptable to various roles and conditions, with a proven ability to quickly grasp new
-                    concepts and responsibilities. Confident and reliable, with a good understanding of workplace expectations and
-                    a commitment to delivering high-quality results. Eager to apply my skills, dedication, and positive attitude to
-                    support organizational goals and grow professionally.
-                </p>
+    <div id="home" class="page active">
+        <div class="home-container">
+            <div class="photo-container">
+                <img src="C:\Users\MOKSHITH KY GOWDA\OneDrive\รูปภาพ\me1.jpg" alt="Mokshith K Y Gowda" class="profile-photo">
+            </div>
+            <div class="home-content">
+                <h1 class="name-title">MOKSHITH K Y GOWDA</h1>
+                <div class="about-section">
+                    <h2>About Me</h2>
+                    <p>
+                        Hardworking and motivated college student with a strong willingness to learn and contribute in dynamic work
+                        environments. Highly adaptable to various roles and conditions, with a proven ability to quickly grasp new
+                        concepts and responsibilities. Confident and reliable, with a good understanding of workplace expectations and
+                        a commitment to delivering high-quality results. Eager to apply my skills, dedication, and positive attitude to
+                        support organizational goals and grow professionally.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Education Page -->
     <div id="education" class="page">
@@ -182,58 +182,7 @@
         </div>
     </div>
 
-    <script>
-        // Navigation functionality
-        const navItems = document.querySelectorAll('.nav-item');
-        const pages = document.querySelectorAll('.page');
-
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const targetPage = item.getAttribute('data-page');
-                
-                // Remove active class from all nav items and pages
-                navItems.forEach(nav => nav.classList.remove('active'));
-                pages.forEach(page => page.classList.remove('active'));
-                
-                // Add active class to clicked nav item and corresponding page
-                item.classList.add('active');
-                document.getElementById(targetPage).classList.add('active');
-            });
-        });
-
-        // Contact card click functionality
-        const contactCards = document.querySelectorAll('.contact-card');
-        
-        contactCards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                const type = card.getAttribute('data-type');
-                const link = card.getAttribute('data-link');
-                
-                switch(type) {
-                    case 'email':
-                        window.open(`mailto:${link}`, '_self');
-                        break;
-                    case 'phone':
-                        window.open(`tel:${link}`, '_self');
-                        break;
-                    case 'github':
-                    case 'linkedin':
-                        window.open(link, '_blank');
-                        break;
-                }
-            });
-        });
-
-        // Smooth scrolling for better UX
-        document.addEventListener('DOMContentLoaded', () => {
-            // Add smooth transition effect
-            document.body.style.opacity = '0';
-            setTimeout(() => {
-                document.body.style.transition = 'opacity 0.5s ease-in-out';
-                document.body.style.opacity = '1';
-            }, 100);
-        });
-    </script>
+    <!-- External JS -->
+    <script src="script.js"></script>
 </body>
-
 </html>
