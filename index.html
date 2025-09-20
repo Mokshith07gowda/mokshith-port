@@ -3,188 +3,445 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mokshith K Y Gowda - Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Mokshith K Y Gowda - Software Engineer Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
 </head>
 <body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">MKG</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="animated-bg"></div>
+    <div class="particles" id="particles"></div>
+
     <!-- Navigation -->
-    <nav>
-        <ul>
-            <li class="nav-item active" data-page="home">Home</li>
-            <li class="nav-item" data-page="education">Education</li>
-            <li class="nav-item" data-page="projects">Projects</li>
-            <li class="nav-item" data-page="skills">Skills</li>
-            <li class="nav-item" data-page="contact">Contact</li>
-        </ul>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">MKG</div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item active" data-page="home">Home</li>
+                <li class="nav-item" data-page="education">Education</li>
+                <li class="nav-item" data-page="projects">Projects</li>
+                <li class="nav-item" data-page="certificates">Certificates</li>
+                <li class="nav-item" data-page="skills">Skills</li>
+                <li class="nav-item" data-page="contact">Contact</li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </nav>
 
-    <!-- Home Page -->
-    <div id="home" class="page active">
-        <div class="home-container">
-            <div class="photo-container">
-                <img src="me1.jpg" alt="Mokshith K Y Gowda" class="profile-photo">
-            </div>
-            <div class="home-content">
-                <h1 class="name-title">MOKSHITH K Y GOWDA</h1>
-                <div class="about-section">
-                    <h2>About Me</h2>
-                    <p>
-                        Hardworking and motivated college student with a strong willingness to learn and contribute in dynamic work
+    <!-- Home Section -->
+    <section class="hero-section page-section active" id="home">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-subtitle">Software Engineer</div>
+                <h1 class="hero-title">Mokshith K Y Gowda</h1>
+                <p class="hero-description">
+                    Hardworking and motivated college student with a strong willingness to learn and contribute in dynamic work
                         environments. Highly adaptable to various roles and conditions, with a proven ability to quickly grasp new
                         concepts and responsibilities. Confident and reliable, with a good understanding of workplace expectations and
                         a commitment to delivering high-quality results. Eager to apply my skills, dedication, and positive attitude to
                         support organizational goals and grow professionally.
-                    </p>
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary nav-item" data-page="contact">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                    <a href="#projects" class="btn btn-outline nav-item" data-page="projects">
+                        <i class="fas fa-code"></i> View Work
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                <div class="profile-container">
+                    <img src="me1.jpg" 
+                         alt="Mokshith K Y Gowda" class="profile-photo">
+                    <div class="floating-icons">
+                        <div class="floating-icon"><i class="fab fa-python"></i></div>
+                        <div class="floating-icon"><i class="fab fa-react"></i></div>
+                        <div class="floating-icon"><i class="fas fa-brain"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Education Page -->
-    <div id="education" class="page">
-        <h2 class="page-title">Education</h2>
-        <div class="education-container">
-            <div class="education-item">
-                <h3>RV INSTITUTE OF TECHNOLOGY AND MANAGEMENT</h3>
-                <div class="degree">B.E. Computer Science and Engineering</div>
-                <div class="duration">2022 – 2026</div>
-                <div class="score">GPA: 7.96</div>
+    <!-- Education Section -->
+    <section class="page-section" id="education">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">My academic journey and educational achievements</p>
+        </div>
+        <div class="cards-grid education-grid">
+            <div class="card education-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="education-year">2026</div>
+                <div class="education-content">
+                    <h3>RV Institute of Technology and Management</h3>
+                    <div class="education-degree">Bachelor of Engineering - Computer Science</div>
+                    <div class="education-score">CGPA: 7.96 / 10.0</div>
+                </div>
             </div>
-            
-            <div class="education-item">
-                <h3>ALVA'S PU COLLEGE</h3>
-                <div class="degree">Pre-University Education</div>
-                <div class="duration">2020 – 2022</div>
-                <div class="score">Percentage: 92%</div>
+            <div class="card education-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="education-year">2022</div>
+                <div class="education-content">
+                    <h3>Alva's PU College</h3>
+                    <div class="education-degree">Pre-University Education (Science)</div>
+                    <div class="education-score">Percentage: 92%</div>
+                </div>
             </div>
-            
-            <div class="education-item">
-                <h3>ST MARY'S INTERNATIONAL SCHOOL</h3>
-                <div class="degree">1st - 10th Schooling</div>
-                <div class="duration">2010 – 2020</div>
-                <div class="score">Percentage: 85%</div>
+            <div class="card education-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="education-year">2020</div>
+                <div class="education-content">
+                    <h3>St Mary's International School</h3>
+                    <div class="education-degree">Secondary Education (10th Grade)</div>
+                    <div class="education-score">Percentage: 85%</div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Projects Page -->
-    <div id="projects" class="page">
-        <h2 class="page-title">Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>Image Recognition using Convolutional Neural Networks</h3>
-                <div class="duration">Feb 2025 - Apr 2025</div>
-                <div class="description">
-                    Developed a program to detect and identify objects and images, classify them based on color, type and shape.
+    <!-- Projects Section -->
+    <section class="page-section" id="projects">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Innovative solutions built with modern technologies</p>
+        </div>
+        <div class="cards-grid projects-grid">
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">AI-Powered Image Recognition System</h3>
+                        <div class="project-duration">Feb 2025 - Apr 2025</div>
+                    </div>
                 </div>
-                <div class="tools">Tools Used: Python, Java</div>
+                <p class="project-description">
+                    Advanced deep learning system for real-time object detection and classification with 95% accuracy. 
+                    Implemented custom CNN architecture with transfer learning for optimal performance.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">Keras</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                </div>
             </div>
-            
-            <div class="project-card">
-                <h3>American Sign Language Detection Using CNN</h3>
-                <div class="duration">Oct 2024 – Dec 2024</div>
-                <div class="description">
-                    Developed a program to detect hand signs, which gives the accuracy of the sign that is correct using ASL 
-                    (American Sign Language) and CNN (Convolutional Neural Networks).
+
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">ASL Detection with Real-time Processing</h3>
+                        <div class="project-duration">Oct 2024 - Dec 2024</div>
+                    </div>
                 </div>
-                <div class="tools">Tools Used: Python</div>
+                <p class="project-description">
+                    Machine learning application for American Sign Language recognition using computer vision. 
+                    Achieved 92% accuracy with real-time gesture detection and translation capabilities.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">MediaPipe</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">OpenCV</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                </div>
             </div>
-            
-            <div class="project-card">
-                <h3>English Language Error Detection</h3>
-                <div class="duration">Dec 2023 – Feb 2024</div>
-                <div class="description">
-                    Developed a program to identify grammatical, spelling, and syntax errors in English text using C. 
-                    Implemented error detection algorithms, optimized string processing, and achieved 90% accuracy.
+
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Food Project</h3>
+                        <div class="project-duration">Aug 2025 - sep 2025</div>
+                    </div>
                 </div>
-                <div class="tools">Tools Used: C</div>
+                <p class="project-description">
+                   Developed a responsive food delivery website showcasing subscription plans, customer testimonials, and service locations.
+                   Implemented modern UI/UX with clean layouts, pricing tables, and smooth navigation for an engaging user experience.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Mokshith07gowda/food_project" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                    <a href="https://mokshith07gowda.github.io/food_project/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                </div>
+            </div>
+
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Bella Vista Restaurant Project</h3>
+                        <div class="project-duration">Aug 2025</div>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Created a web page for Bella Vista Restaurant featuring menu, location, and contact details.
+                    Designed with a clean layout and responsive elements to enhance user experience across devices.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Mokshith07gowda/Bella_Vista-_Restaurant_project" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                    <a href="https://mokshith07gowda.github.io/Bella_Vista-_Restaurant_project/" class="project-link" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                </div>
+            </div>
+
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">simple_msg_sender</h3>
+                        <div class="project-duration">Feb 2025</div>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Created a Python utility to send WhatsApp messages programmatically using a script (whatsapp_sender.py), automating message delivery.
+                    Designed the tool to be simple, lightweight and easy to integrate, enabling users to send messages with minimal setup.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Mokshith07gowda/simple_msg_sender" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+
+            
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Laundary service web</h3>
+                        <div class="project-duration">Sep 2025</div>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Developed a responsive laundry service website with subscription plans, customer testimonials, and service locations.
+                    Implemented modern UI/UX with clean layouts, pricing tables, and smooth navigation for an engaging user experience.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Mokshith07gowda/Laundary_service_JS" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    <a href="https://mokshith07gowda.github.io/Laundary_service_JS/" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                </div>
+            </div>
+
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Typing Tutor: Speed and Accuracy Tracker</h3>
+                        <div class="project-duration">Apr 2024</div>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Developed a C program to improve typing speed and accuracy through timed tests and progress tracking.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">C</span>
+                    <span class="tech-tag">Data Structures</span>
+                    <span class="tech-tag">Algorithms</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Mokshith07gowda/Typing-Tutor" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="page-section" id="certificates">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Professional certifications and achievements</p>
+            
+        </div>
+        <div class="cards-grid certificates-grid">
+            <div class="card certificate-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="certificate-icon">
+                    <i class="fas fa-code"></i>
+                    
+                </div>
+                <h3 class="certificate-title">Full-Stack Web Development</h3>
+                <div class="certificate-issuer">Tutedude</div>
+                <div class="certificate-date">Ongoing</div>
+            </div>
+
+            <div class="card certificate-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="certificate-icon">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    
+                </div>
+                <h3 class="certificate-title">GIS & AI/ML</h3>
+                <div class="certificate-issuer">AVAKAZA GEOSCIENCE RESEARCH TECHNOLOGIES</div>
+                <div class="certificate-date">Issued April 2025</div>
+            </div>
+
+            <div class="card certificate-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="certificate-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="certificate-title">AI Tools Workshop</h3>
+                <div class="certificate-issuer">be10X</div>
+                <div class="certificate-date">Issued July 2025</div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Skills Page -->
-    <div id="skills" class="page">
-        <h2 class="page-title">Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">Java</span>
+    <!-- Skills Section -->
+    <section class="page-section" id="skills">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+        </div>
+        <div class="cards-grid skills-grid">
+            <div class="card skill-category" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="skill-title">Programming Languages</h3>
+                <div class="skill-tags">
                     <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">C</span>
                     <span class="skill-tag">C++</span>
                 </div>
             </div>
-            
-            <div class="skill-category">
-                <h3>Web Technologies</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
+
+            <div class="card skill-category" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3 class="skill-title">Web Technologies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
                 </div>
             </div>
-            
-            <div class="skill-category">
-                <h3>Database Systems</h3>
-                <div class="skill-list">
+
+            <div class="card skill-category" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="skill-title">AI & Machine Learning</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Pandas</span>
+                </div>
+            </div>
+
+            <div class="card skill-category" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="skill-title">Databases</h3>
+                <div class="skill-tags">
                     <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MongoDB</span>
                 </div>
             </div>
-            
-            <div class="skill-category">
-                <h3>Tools and Software</h3>
-                <div class="skill-list">
+
+            <div class="card skill-category" data-aos="fade-up" data-aos-delay="500">
+                <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="skill-title">Tools & Platforms</h3>
+                <div class="skill-tags">
                     <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS</span>
                     <span class="skill-tag">VS Code</span>
                     <span class="skill-tag">PyCharm</span>
                 </div>
             </div>
-            
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="skill-list">
+
+            <div class="card skill-category" data-aos="fade-up" data-aos-delay="600">
+                <div class="skill-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3 class="skill-title">Languages</h3>
+                <div class="skill-tags">
                     <span class="skill-tag">Kannada</span>
                     <span class="skill-tag">English</span>
                     <span class="skill-tag">Hindi</span>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Contact Page -->
-    <div id="contact" class="page">
-        <h2 class="page-title">Contact Info</h2>
-        <div class="contact-container">
-            <div class="contact-card" data-type="email" data-link="mokshithkygowda@gmail.com">
-                <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                <p>mokshithkygowda@gmail.com</p>
+    <!-- Contact Section -->
+    <section class="page-section" id="contact">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's connect and discuss opportunities</p>
+        </div>
+        <div class="cards-grid contact-grid">
+            <div class="card contact-card" data-aos="fade-up" data-aos-delay="100" data-contact="email">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="contact-title">Email</h3>
+                <p class="contact-info">mokshithkygowda@gmail.com</p>
             </div>
-            
-            <div class="contact-card" data-type="phone" data-link="+919353402179">
-                <i class="fas fa-phone"></i>
-                <h3>Phone</h3>
-                <p>+91 9353402179</p>
+
+            <div class="card contact-card" data-aos="fade-up" data-aos-delay="200" data-contact="phone">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3 class="contact-title">Phone</h3>
+                <p class="contact-info">+91 9353402179</p>
             </div>
-            
-            <div class="contact-card" data-type="github" data-link="https://github.com/Mokshith07gowda">
-                <i class="fab fa-github"></i>
-                <h3>GitHub</h3>
-                <p>mokshith07gowda</p>
+
+            <div class="card contact-card" data-aos="fade-up" data-aos-delay="300" data-contact="github">
+                <div class="contact-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h3 class="contact-title">GitHub</h3>
+                <p class="contact-info">mokshith07gowda</p>
             </div>
-            
-            <div class="contact-card" data-type="linkedin" data-link="https://www.linkedin.com/in/mokshithkygowda">
-                <i class="fab fa-linkedin"></i>
-                <h3>LinkedIn</h3>
-                <p>Mokshithkygowda</p>
+
+            <div class="card contact-card" data-aos="fade-up" data-aos-delay="400" data-contact="linkedin">
+                <div class="contact-icon">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <h3 class="contact-title">LinkedIn</h3>
+                <p class="contact-info">mokshithkygowda</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- External JS -->
-    <script src="script.js"></script>
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="index.js"></script>
+
 </body>
 </html>
-
-
