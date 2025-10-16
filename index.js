@@ -40,17 +40,15 @@ navItems.forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
         const targetPage = item.getAttribute('data-page');
+        const targetSection = document.getElementById(targetPage);
         
         navItems.forEach(nav => nav.classList.remove('active'));
-        sections.forEach(section => section.classList.remove('active'));
-        
         item.classList.add('active');
-        document.getElementById(targetPage).classList.add('active');
         
         navMenu.classList.remove('active');
         mobileToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
         
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
 
@@ -64,12 +62,44 @@ mobileToggle.addEventListener('click', () => {
     }
 });
 
+let lastScrollTop = 0;
+
 window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Hide/show navbar based on scroll direction
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Scrolling down
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling up
+        navbar.style.transform = 'translateY(0)';
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
+    
+    // Update active nav item based on scroll position
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('data-page') === current) {
+            item.classList.add('active');
+        }
+    });
 });
 
 const contactCards = document.querySelectorAll('.contact-card');
@@ -146,18 +176,39 @@ setTimeout(() => {
         typeWriter(heroTitle, 'Mokshith K Y Gowda', 150);
     }
 }, 3500);
+
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 1s ease forwards';
+        if (entry.isIntersecting && !entry.target.classList.contains('revealed')) {
+            entry.target.classList.add('revealed');
+            entry.target.style.transition = 'all 0.4s ease-out';
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
         }
     });
 }, observerOptions);
-document.querySelectorAll('.card').forEach(card => {
-    observer.observe(card);
+
+const pageSections = document.querySelectorAll('.page-section');
+pageSections.forEach(section => {
+    const cards = section.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        observer.observe(card);
+    });
+});
+
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelectorAll('.card').forEach(card => {
+            card.classList.remove('revealed');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+        });
+    });
 });
