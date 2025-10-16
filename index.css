@@ -79,7 +79,7 @@ nav {
     background: rgba(12, 12, 12, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
-    transition: var(--transition);
+    transition: transform 0.3s ease, padding 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
 }
 
 nav.scrolled {
@@ -332,7 +332,6 @@ nav.scrolled {
     padding: 120px 40px;
     max-width: 1400px;
     margin: 0 auto;
-    display: none;
 }
 
 .page-section.active {
@@ -728,9 +727,15 @@ nav.scrolled {
     50% { transform: scale(1.05); }
 }
 
-@keyframes loading {
-    0% { width: 0%; }
-    100% { width: 100%; }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 1200px) {
