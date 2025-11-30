@@ -4,79 +4,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mokshith K Y Gowda - Software Engineer Portfolio</title>
+    <meta name="description" content="Mokshith K Y Gowda - Computer Science Student & Full-Stack Developer">
+    <title>Mokshith K Y Gowda | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="index.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-logo">MKG</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <!-- Solar System -->
+        <div class="solar-system">
+            <div class="sun"></div>
+            <div class="orbit orbit-mercury">
+                <div class="planet mercury"></div>
+            </div>
+            <div class="orbit orbit-venus">
+                <div class="planet venus"></div>
+            </div>
+            <div class="orbit orbit-earth">
+                <div class="planet earth"></div>
+            </div>
+            <div class="orbit orbit-mars">
+                <div class="planet mars"></div>
+            </div>
+            <div class="orbit orbit-jupiter">
+                <div class="planet jupiter"></div>
+            </div>
+            <div class="orbit orbit-saturn">
+                <div class="planet saturn">
+                    <div class="ring"></div>
+                </div>
+            </div>
+            <div class="orbit orbit-uranus">
+                <div class="planet uranus"></div>
+            </div>
+            <div class="orbit orbit-neptune">
+                <div class="planet neptune"></div>
             </div>
         </div>
     </div>
 
-    <div class="animated-bg"></div>
-    <div class="particles" id="particles"></div>
-
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">MKG</div>
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item active" data-page="home">Home</li>
-                <li class="nav-item" data-page="education">Education</li>
-                <li class="nav-item" data-page="projects">Projects</li>
-                <li class="nav-item" data-page="certificates">Certificates</li>
-                <li class="nav-item" data-page="skills">Skills</li>
-                <li class="nav-item" data-page="contact">Contact</li>
-            </ul>
-            <button class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
+            <a href="#home" class="nav-logo">Mokshith KY</a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section class="hero-section page-section active" id="home">
-        <div class="hero-content">
-            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
-                <div class="hero-subtitle">Software Engineer</div>
-                <h1 class="hero-title">Mokshith K Y Gowda</h1>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Mokshith K Y Gowda</h1>
+                <div class="hero-titles">
+                    <span class="typing-text"></span>
+                </div>
                 <p class="hero-description">
-                    Hardworking and motivated college student with a strong willingness to learn and contribute in
-                    dynamic work
-                    environments. Highly adaptable to various roles and conditions, with a proven ability to quickly
-                    grasp new
-                    concepts and responsibilities. Confident and reliable, with a good understanding of workplace
-                    expectations and
-                    a commitment to delivering high-quality results. Eager to apply my skills, dedication, and positive
-                    attitude to
-                    support organizational goals and grow professionally.
+                    Computer Science Engineering student passionate about AI/ML, Full-Stack Development, 
+                    and creating innovative solutions that make a difference.
                 </p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary nav-item" data-page="contact">
-                        <i class="fas fa-envelope"></i> Get In Touch
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/mokshith07gowda" target="_blank" rel="noopener" class="social-link">
+                        <i class="fab fa-github"></i>
                     </a>
-                    <a href="#projects" class="btn btn-outline nav-item" data-page="projects">
-                        <i class="fas fa-code"></i> View Work
+                    <a href="https://linkedin.com/in/mokshithkygowda" target="_blank" rel="noopener" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:mokshithkygowda@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://drive.google.com/file/d/18uWwxaXZyPPiUtipfPOZ0yt-bsX1cdUF/view?usp=drive_link" target="_blank" rel="noopener" class="social-link resume-link">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Resume</span>
                     </a>
                 </div>
             </div>
-            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
-                <div class="profile-container">
-                    <img src="me1.jpg" alt="Mokshith K Y Gowda" class="profile-photo">
-                    <div class="floating-icons">
-                        <div class="floating-icon"><i class="fab fa-python"></i></div>
-                        <div class="floating-icon"><i class="fab fa-react"></i></div>
-                        <div class="floating-icon"><i class="fas fa-brain"></i></div>
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+                <div class="image-container">
+                    <img src="me1.jpg" alt="Mokshith K Y Gowda">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="page-section" id="about">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Passionate developer building the future with code</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right">
+                <div class="summary-box">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;"><i class="fas fa-user-circle"></i> Professional Summary</h3>
+                    <p class="about-description" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05)); padding: 20px; border-radius: 10px; border-left: 4px solid var(--primary-color);">
+                        Computer Science student specializing in full-stack web development with the MERN stack. Fast learner and
+                        hardworking, with hands-on experience building real-time applications and achieving <strong>7th rank in Cisco
+                        Forecast League</strong>.
+                    </p>
+                </div>
+                <p class="about-description">
+                    I'm a final-year Computer Science Engineering student at <strong>RV Institute of Technology and Management</strong> 
+                    with a strong passion for artificial intelligence, machine learning, AR/VR technologies, and full-stack web development. 
+                    With a CGPA of 8.02, I've consistently demonstrated academic excellence while pursuing my passion for technology.
+                </p>
+                <p class="about-description">
+                    My journey in tech spans from building AR-based indoor navigation systems using Unity 3D and SLAM technology, to developing 
+                    real-time chat applications with the MERN stack, and creating advanced machine learning models for sales forecasting. 
+                    I thrive on solving complex problems and turning innovative ideas into practical solutions with published research papers 
+                    in AR navigation and ensemble learning.
+                </p>
+                <p class="about-description">
+                    Beyond coding, I'm fluent in Kannada, English, and Hindi, which helps me collaborate effectively in diverse teams. 
+                    I'm an active member of NSS (National Service Scheme) and enjoy playing cricket, watching anime, and reading manga in my free time. 
+                    I believe in continuous learning and staying updated with the latest technologies to create meaningful impact through code.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="stat-number">11+</h3>
+                        <p class="stat-label">Projects Completed</p>
                     </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="stat-number">8+</h3>
+                        <p class="stat-label">Certifications</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="stat-number">8.02</h3>
+                        <p class="stat-label">CGPA</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="stat-number">2</h3>
+                        <p class="stat-label">Publications</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-highlights" data-aos="fade-left">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p>B.E. in Computer Science from RVITM, graduating in 2026</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Expertise</h3>
+                    <p>MERN Stack, AR/VR, AI/ML, Computer Vision</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Achievements</h3>
+                    <p>7th Rank in Cisco Forecast League, 2 Research Publications, NSS Member</p>
                 </div>
             </div>
         </div>
@@ -123,192 +240,378 @@
             <p class="section-subtitle">Innovative solutions built with modern technologies</p>
         </div>
         <div class="cards-grid projects-grid">
-            <div class="card project-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="project-header">
+            <div class="card project-card featured-project" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-badge">Featured</div>
+                <div class="project-header" style="margin-top: 35px;">
                     <div>
-                        <h3 class="project-title">AI-Powered Image Recognition System</h3>
-                        <div class="project-duration">Feb 2025 - Apr 2025</div>
+                        <h3 class="project-title">AR Indoor Navigation System</h3>
                     </div>
                 </div>
-                <p class="project-description">
-                    Advanced deep learning system for real-time object detection and classification with 95% accuracy.
-                    Implemented custom CNN architecture with transfer learning for optimal performance.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">TensorFlow</span>
-                    <span class="tech-tag">OpenCV</span>
-                    <span class="tech-tag">Keras</span>
-                </div>
-                <div class="project-links">
-                    <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Major Project | Published Research</div>
+                    <p class="project-description">
+                        Built an AR-based indoor navigation application for campus buildings with real-time AR overlays and 3D path guidance. 
+                        Developed room detection using A* algorithm and implemented spatial anchors, AR navigation arrows, and SLAM-based tracking 
+                        achieving 1.47m positioning accuracy. Published research paper on SLAM and multi-sensor fusion for precise indoor positioning.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Unity 3D</span>
+                        <span class="tech-tag">AR Foundation</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">A* Algorithm</span>
+                        <span class="tech-tag">SLAM</span>
+                        <span class="tech-tag">JSON</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#publications" class="project-link"><i class="fas fa-file-alt"></i> Publication</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="card project-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="project-header">
+            <div class="card project-card featured-project" data-aos="fade-up" data-aos-delay="150">
+                <div class="project-badge">Featured</div>
+                <div class="project-header" style="margin-top: 35px;">
                     <div>
-                        <h3 class="project-title">ASL Detection with Real-time Processing</h3>
-                        <div class="project-duration">Oct 2024 - Dec 2024</div>
+                        <h3 class="project-title">Chat Sync - Real-time Chat Application</h3>
                     </div>
                 </div>
-                <p class="project-description">
-                    Machine learning application for American Sign Language recognition using computer vision.
-                    Achieved 92% accuracy with real-time gesture detection and translation capabilities.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">MediaPipe</span>
-                    <span class="tech-tag">TensorFlow</span>
-                    <span class="tech-tag">OpenCV</span>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">MERN Stack Project</div>
+                    <p class="project-description">
+                        Built a full-stack real-time chat application using MERN stack (MongoDB, Express.js, React, Node.js) with Socket.io 
+                        for live messaging capabilities. Implemented JWT-based secure authentication and integrated Cloudinary for efficient 
+                        image storage and delivery. Features include real-time notifications, online status, and modern responsive UI with TailwindCSS.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">TailwindCSS</span>
+                        <span class="tech-tag">Cloudinary</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                    <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+
+            <div class="card project-card featured-project" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-badge">7th Rank</div>
+                <div class="project-header" style="margin-top: 35px;">
+                    <div>
+                        <h3 class="project-title">Sales Forecasting Tool - Cisco Forecast League</h3>
+                    </div>
+                </div>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Data Science Competition</div>
+                    <p class="project-description">
+                        Developed a sophisticated time-series forecasting model for 20 Cisco products integrating macroeconomic indicators 
+                        with historical sales data. Implemented ARIMA and Random Forest Regression algorithms achieving 90.46% accuracy. 
+                        Ranked 7th among all RV Institutions in the Cisco Forecast League competition.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">ARIMA</span>
+                        <span class="tech-tag">Random Forest</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card project-card featured-project" data-aos="fade-up" data-aos-delay="250">
+                <div class="project-badge">Featured</div>
+                <div class="project-header" style="margin-top: 35px;">
+                    <div>
+                        <h3 class="project-title">Weather Data Analysis</h3>
+                    </div>
+                </div>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Data Science Project</div>
+                    <p class="project-description">
+                        Comprehensive weather data analysis project performing exploratory data analysis on meteorological datasets. 
+                        Implemented data visualization techniques to uncover patterns and trends in temperature, precipitation, and 
+                        other weather parameters. Utilized MongoDB for efficient data storage and retrieval, along with statistical 
+                        methods and machine learning algorithms for predictive modeling and climate pattern recognition.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mokshith07gowda/weather-data-analysis-" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                    </div>
                 </div>
             </div>
 
             <div class="card project-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">Food Project</h3>
-                        <div class="project-duration">Aug 2025 - sep 2025</div>
+                        <h3 class="project-title">ASL Detection with Real-time Processing</h3>
                     </div>
                 </div>
-                <p class="project-description">
-                    Developed a responsive food delivery website showcasing subscription plans, customer testimonials,
-                    and service locations.
-                    Implemented modern UI/UX with clean layouts, pricing tables, and smooth navigation for an engaging
-                    user experience.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JavaScript</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Mokshith07gowda/food_project" class="project-link" target="_blank"
-                        rel="noopener"><i class="fab fa-github"></i> Code</a>
-                    <a href="https://mokshith07gowda.github.io/food_project/" class="project-link" target="_blank"
-                        rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Oct 2024 - Dec 2024</div>
+                    <p class="project-description">
+                        Developed a machine learning application for American Sign Language recognition using computer vision.
+                        Achieved 92% accuracy with real-time gesture detection and translation capabilities using MediaPipe hand tracking.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MediaPipe</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">OpenCV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
                 </div>
             </div>
 
             <div class="card project-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">Bella Vista Restaurant Project</h3>
-                        <div class="project-duration">Aug 2025</div>
+                        <h3 class="project-title">Food Project</h3>
                     </div>
                 </div>
-                <p class="project-description">
-                    Created a web page for Bella Vista Restaurant featuring menu, location, and contact details.
-                    Designed with a clean layout and responsive elements to enhance user experience across devices.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Mokshith07gowda/Bella_Vista-_Restaurant_project" class="project-link"
-                        target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                    <a href="https://mokshith07gowda.github.io/Bella_Vista-_Restaurant_project/" class="project-link"
-                        target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Aug 2025 - Sep 2025</div>
+                    <p class="project-description">
+                        Developed a responsive food delivery website showcasing subscription plans, customer testimonials,
+                        and service locations.
+                        Implemented modern UI/UX with clean layouts, pricing tables, and smooth navigation for an engaging
+                        user experience.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mokshith07gowda/food_project" class="project-link" target="_blank"
+                            rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://mokshith07gowda.github.io/food_project/" class="project-link" target="_blank"
+                            rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                    </div>
                 </div>
             </div>
 
             <div class="card project-card" data-aos="fade-up" data-aos-delay="500">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">simple_msg_sender</h3>
-                        <div class="project-duration">Feb 2025</div>
+                        <h3 class="project-title">Bella Vista Restaurant Project</h3>
                     </div>
                 </div>
-                <p class="project-description">
-                    Created a Python utility to send WhatsApp messages programmatically using a script
-                    (whatsapp_sender.py), automating message delivery.
-                    Designed the tool to be simple, lightweight and easy to integrate, enabling users to send messages
-                    with minimal setup.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Mokshith07gowda/simple_msg_sender" class="project-link" target="_blank"
-                        rel="noopener"><i class="fab fa-github"></i> Code</a>
-                </div>
-            </div>
-
-
-            <div class="card project-card" data-aos="fade-up" data-aos-delay="700">
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">Laundary service web</h3>
-                        <div class="project-duration">Sep 2025</div>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Aug 2025</div>
+                    <p class="project-description">
+                        Created a web page for Bella Vista Restaurant featuring menu, location, and contact details.
+                        Designed with a clean layout and responsive elements to enhance user experience across devices.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
                     </div>
-                </div>
-                <p class="project-description">
-                    Developed a responsive laundry service website featuring subscription plans, customer testimonials,
-                    and service locations. Implemented modern UI/UX with clean layouts, pricing tables, and smooth navigation
-                    for an engaging user experience, and integrated EmailJS for seamless form handling and automated email notifications.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML</span>
-                    <span class="tech-tag">CSS</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">EmailJS</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Mokshith07gowda/Laundary_Service_JS" class="project-link"
-                        target="_blank"><i class="fab fa-github"></i> Code</a>
-                    <a href="https://mokshith07gowda.github.io/Laundary_Service_JS/" class="project-link"
-                        target="_blank"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                    <div class="project-links">
+                        <a href="https://github.com/Mokshith07gowda/Bella_Vista-_Restaurant_project" class="project-link"
+                            target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://mokshith07gowda.github.io/Bella_Vista-_Restaurant_project/" class="project-link"
+                            target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                    </div>
                 </div>
             </div>
 
             <div class="card project-card" data-aos="fade-up" data-aos-delay="600">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">Typing Tutor: Speed and Accuracy Tracker</h3>
-                        <div class="project-duration">Apr 2024</div>
+                        <h3 class="project-title">simple_msg_sender</h3>
                     </div>
                 </div>
-                <p class="project-description">
-                    Developed a C program to improve typing speed and accuracy through timed tests and progress
-                    tracking.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">C</span>
-                    <span class="tech-tag">Data Structures</span>
-                    <span class="tech-tag">Algorithms</span>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Feb 2025</div>
+                    <p class="project-description">
+                        Created a Python utility to send WhatsApp messages programmatically using a script
+                        (whatsapp_sender.py), automating message delivery.
+                        Designed the tool to be simple, lightweight and easy to integrate, enabling users to send messages
+                        with minimal setup.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mokshith07gowda/simple_msg_sender" class="project-link" target="_blank"
+                            rel="noopener"><i class="fab fa-github"></i> Code</a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="https://github.com/Mokshith07gowda/Typing-Tutor" class="project-link" target="_blank"><i
-                            class="fab fa-github"></i> Code</a>
+            </div>
+
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Laundry Service Web</h3>
+                    </div>
+                </div>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Sep 2025</div>
+                    <p class="project-description">
+                        Developed a responsive laundry service website with subscription plans, customer testimonials, and
+                        service locations.
+                        Implemented modern UI/UX with clean layouts, pricing tables, and smooth navigation for an engaging
+                        user experience.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mokshith07gowda/Laundary_service_JS" class="project-link"
+                            target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://mokshith07gowda.github.io/Laundary_service_JS/" class="project-link"
+                            target="_blank"><i class="fas fa-external-link-alt"></i> Live Site</a>
+                    </div>
                 </div>
             </div>
 
             <div class="card project-card" data-aos="fade-up" data-aos-delay="800">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">Hand Game</h3>
-                        <div class="project-duration">Sep 2024</div>
+                        <h3 class="project-title">Typing Tutor: Speed and Accuracy Tracker</h3>
                     </div>
                 </div>
-                <p class="project-description">
-                    Developed a Python-based “Rock, Paper, Scissors, Lizard, Spock” game inspired by The Big Bang
-                    Theory TV show, featuring interactive gameplay against the computer. Implemented clear rules, randomized
-                    outcomes, and a user-friendly console interface.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/Mokshith07gowda/hand-game" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Apr 2024</div>
+                    <p class="project-description">
+                        Developed a C program to improve typing speed and accuracy through timed tests and progress
+                        tracking.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">Data Structures</span>
+                        <span class="tech-tag">Algorithms</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mokshith07gowda/Typing-Tutor" class="project-link" target="_blank"><i
+                                class="fab fa-github"></i> Code</a>
+                    </div>
                 </div>
             </div>
 
+            <div class="card project-card" data-aos="fade-up" data-aos-delay="900">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">Hand Game</h3>
+                    </div>
+                </div>
+                <button class="know-more-btn">
+                    <span>Know More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-details">
+                    <div class="project-duration">Sep 2024</div>
+                    <p class="project-description">
+                        Developed a Python-based "Rock, Paper, Scissors, Lizard, Spock" game inspired by The Big Bang
+                        Theory TV show, featuring interactive gameplay against the computer. Implemented clear rules, randomized
+                        outcomes, and a user-friendly console interface.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mokshith07gowda/hand-game" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="page-section" id="publications">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Research Publications</h2>
+            <p class="section-subtitle">Published research papers and academic contributions</p>
+        </div>
+        <div class="cards-grid publications-grid">
+            <div class="card publication-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="publication-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h3 class="publication-title">AR Indoor Navigation System: Integrating SLAM and Multi-Sensor Fusion for Precise Indoor Positioning</h3>
+                <p class="publication-description">
+                    Research paper on AR navigation using SLAM and multi-sensor fusion with 1.47m positioning accuracy for campus indoor navigation.
+                </p>
+                <div class="publication-meta">
+                    <span class="publication-tag"><i class="fas fa-university"></i> Academic Research</span>
+                    <span class="publication-tag"><i class="fas fa-chart-line"></i> 1.47m Accuracy</span>
+                </div>
+            </div>
+
+            <div class="card publication-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="publication-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h3 class="publication-title">Hybrid Ensemble Learning with Uncertainty Quantification for Multi-objective EDM Parameter Optimization</h3>
+                <p class="publication-description">
+                    Ensemble learning framework with R² values of 0.961-0.753 for EDM (Electrical Discharge Machining) optimization using advanced machine learning techniques.
+                </p>
+                <div class="publication-meta">
+                    <span class="publication-tag"><i class="fas fa-robot"></i> Machine Learning</span>
+                    <span class="publication-tag"><i class="fas fa-chart-line"></i> R² 0.961</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -317,13 +620,11 @@
         <div class="section-header" data-aos="fade-up">
             <h2 class="section-title">Certifications</h2>
             <p class="section-subtitle">Professional certifications and achievements</p>
-
         </div>
         <div class="cards-grid certificates-grid">
             <div class="card certificate-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="certificate-icon">
                     <i class="fas fa-code"></i>
-
                 </div>
                 <h3 class="certificate-title">Full-Stack Web Development</h3>
                 <div class="certificate-issuer">Tutedude</div>
@@ -333,9 +634,8 @@
             <div class="card certificate-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="certificate-icon">
                     <i class="fa-solid fa-screwdriver-wrench"></i>
-
                 </div>
-                <h3 class="certificate-title">GIS & AI/ML</h3>
+                <h3 class="certificate-title">7-day GIS & AI/ML Workshop</h3>
                 <div class="certificate-issuer">AVAKAZA GEOSCIENCE RESEARCH TECHNOLOGIES</div>
                 <div class="certificate-date">Issued April 2025</div>
             </div>
@@ -347,6 +647,51 @@
                 <h3 class="certificate-title">AI Tools Workshop</h3>
                 <div class="certificate-issuer">be10X</div>
                 <div class="certificate-date">Issued July 2025</div>
+            </div>
+
+            <div class="card certificate-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="certificate-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3 class="certificate-title">Networking Basics</h3>
+                <div class="certificate-issuer">Cisco</div>
+                <div class="certificate-date">Completed</div>
+            </div>
+
+            <div class="card certificate-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="certificate-icon">
+                    <i class="fas fa-vr-cardboard"></i>
+                </div>
+                <h3 class="certificate-title">AR/VR Workshop</h3>
+                <div class="certificate-issuer">Industry Workshop</div>
+                <div class="certificate-date">Completed</div>
+            </div>
+
+            <div class="card certificate-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="certificate-icon">
+                    <i class="fab fa-aws"></i>
+                </div>
+                <h3 class="certificate-title">AWS Workshop</h3>
+                <div class="certificate-issuer">Amazon Web Services</div>
+                <div class="certificate-date">Completed</div>
+            </div>
+
+            <div class="card certificate-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="certificate-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3 class="certificate-title">Introduction to Cryptography for Beginners</h3>
+                <div class="certificate-issuer">Simplilearn</div>
+                <div class="certificate-date">Completed</div>
+            </div>
+
+            <div class="card certificate-card" data-aos="fade-up" data-aos-delay="800">
+                <div class="certificate-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3 class="certificate-title">Software Engineering and Project Management</h3>
+                <div class="certificate-issuer">Simplilearn</div>
+                <div class="certificate-date">Completed</div>
             </div>
         </div>
     </section>
@@ -364,11 +709,10 @@
                 </div>
                 <h3 class="skill-title">Programming Languages</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
                     <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
                     <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">C#</span>
                 </div>
             </div>
 
@@ -378,46 +722,46 @@
                 </div>
                 <h3 class="skill-title">Web Technologies</h3>
                 <div class="skill-tags">
-                    <span class="skill-tag">React</span>
                     <span class="skill-tag">HTML5</span>
                     <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">TailwindCSS</span>
                 </div>
             </div>
 
             <div class="card skill-category" data-aos="fade-up" data-aos-delay="300">
                 <div class="skill-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h3 class="skill-title">AI & Machine Learning</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">OpenCV</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">Pandas</span>
-                </div>
-            </div>
-
-            <div class="card skill-category" data-aos="fade-up" data-aos-delay="400">
-                <div class="skill-icon">
                     <i class="fas fa-database"></i>
                 </div>
-                <h3 class="skill-title">Databases</h3>
+                <h3 class="skill-title">Database Systems</h3>
                 <div class="skill-tags">
                     <span class="skill-tag">MySQL</span>
                     <span class="skill-tag">MongoDB</span>
                 </div>
             </div>
 
-            <div class="card skill-category" data-aos="fade-up" data-aos-delay="500">
+            <div class="card skill-category" data-aos="fade-up" data-aos-delay="400">
                 <div class="skill-icon">
                     <i class="fas fa-tools"></i>
                 </div>
-                <h3 class="skill-title">Tools & Platforms</h3>
+                <h3 class="skill-title">Tools & Software</h3>
                 <div class="skill-tags">
                     <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">AWS</span>
                     <span class="skill-tag">VS Code</span>
                     <span class="skill-tag">PyCharm</span>
+                </div>
+            </div>
+
+            <div class="card skill-category" data-aos="fade-up" data-aos-delay="500">
+                <div class="skill-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="skill-title">Core Competencies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">OOPs</span>
+                    <span class="skill-tag">Computer Networks</span>
+                    <span class="skill-tag">Operating Systems</span>
+                    <span class="skill-tag">DSA</span>
                 </div>
             </div>
 
@@ -435,6 +779,41 @@
         </div>
     </section>
 
+    <!-- Memberships & Hobbies Section -->
+    <section class="page-section" id="additional">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Beyond The Code</h2>
+            <p class="section-subtitle">Memberships, interests, and hobbies</p>
+        </div>
+        <div class="additional-content">
+            <div class="membership-section" data-aos="fade-right">
+                <div class="card membership-card">
+                    <div class="membership-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Memberships</h3>
+                    <div class="membership-item">
+                        <h4>NSS - National Service Scheme</h4>
+                        <p>Active student member contributing to social service and community development initiatives</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hobbies-section" data-aos="fade-left">
+                <div class="card hobbies-card">
+                    <div class="hobbies-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Hobbies & Interests</h3>
+                    <div class="hobby-tags">
+                        <span class="hobby-tag"><i class="fas fa-baseball-ball"></i> Sports</span>
+                        <span class="hobby-tag"><i class="fas fa-tv"></i> Watching Anime</span>
+                        <span class="hobby-tag"><i class="fas fa-book"></i> Reading Manga</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="page-section" id="contact">
         <div class="section-header" data-aos="fade-up">
@@ -447,7 +826,7 @@
                     <i class="fas fa-envelope"></i>
                 </div>
                 <h3 class="contact-title">Email</h3>
-                <p class="contact-info">mokshithkygowda@gmail.com</p>
+                <a href="mailto:mokshithkygowda@gmail.com" class="contact-info">mokshithkygowda@gmail.com</a>
             </div>
 
             <div class="card contact-card" data-aos="fade-up" data-aos-delay="200" data-contact="phone">
@@ -455,36 +834,53 @@
                     <i class="fas fa-phone"></i>
                 </div>
                 <h3 class="contact-title">Phone</h3>
-                <p class="contact-info">+91 9353402179</p>
+                <a href="tel:+919353402179" class="contact-info">+91 9353402179</a>
             </div>
 
-            <div class="card contact-card" data-aos="fade-up" data-aos-delay="300" data-contact="github">
+            <div class="card contact-card" data-aos="fade-up" data-aos-delay="400" data-contact="github">
                 <div class="contact-icon">
                     <i class="fab fa-github"></i>
                 </div>
                 <h3 class="contact-title">GitHub</h3>
-                <p class="contact-info">mokshith07gowda</p>
+                <a href="https://github.com/mokshith07gowda" target="_blank" rel="noopener" class="contact-info">mokshith07gowda</a>
             </div>
 
-            <div class="card contact-card" data-aos="fade-up" data-aos-delay="400" data-contact="linkedin">
+            <div class="card contact-card" data-aos="fade-up" data-aos-delay="500" data-contact="linkedin">
                 <div class="contact-icon">
                     <i class="fab fa-linkedin"></i>
                 </div>
                 <h3 class="contact-title">LinkedIn</h3>
-                <p class="contact-info">mokshithkygowda</p>
+                <a href="https://linkedin.com/in/mokshithkygowda" target="_blank" rel="noopener" class="contact-info">mokshithkygowda</a>
+            </div>
+
+            <div class="card contact-card" data-aos="fade-up" data-aos-delay="600" data-contact="location">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="contact-title">Location</h3>
+                <p class="contact-info">Bengaluru, India</p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Mokshith K Y Gowda. All rights reserved.</p>
+            <p class="footer-tagline">Built with passion and code</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="index.js"></script>
-
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
-
-
